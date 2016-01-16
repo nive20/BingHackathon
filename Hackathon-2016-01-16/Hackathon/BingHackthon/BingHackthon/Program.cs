@@ -21,7 +21,7 @@ namespace BingHackthon
         static void Main(string[] args)
         {
             #region data prep
-            string[] input1 = File.ReadAllLines("BingHackathonTrainingData.txt");
+            string[] input1 = File.ReadAllLines("BingHackathonTestData.txt");
             DataTable table = new DataTable();
 
 
@@ -61,7 +61,7 @@ namespace BingHackthon
                 sb.AppendLine(string.Join(",", fields));
             }
 
-            File.WriteAllText("train.csv", sb.ToString());
+            File.WriteAllText("test.csv", sb.ToString());
             #endregion
 
 

@@ -2814,6 +2814,50 @@
             <typeparam name="TSecond">The type of left keys in the dictionary.</typeparam>
             
         </member>
+        <member name="T:Accord.IReadOnlyDictionary`2">
+            <summary>
+              Minimum IReadOnlyDictionary implementation for .NET 3.5 to
+              make Accord.NET work. This is not a complete implementation.
+            </summary>
+            
+        </member>
+        <member name="T:Accord.IReadOnlyCollection`1">
+            <summary>
+              Minimum IReadOnlyCollection implementation for .NET 3.5 to
+              make Accord.NET work. This is not a complete implementation.
+            </summary>
+            
+        </member>
+        <member name="M:Accord.IReadOnlyDictionary`2.ContainsKey(`0)">
+            <summary>
+              Determines whether the dictionary contains the specified key.
+            </summary>
+            
+        </member>
+        <member name="M:Accord.IReadOnlyDictionary`2.TryGetValue(`0,`1@)">
+            <summary>
+              Tries to get a value.
+            </summary>
+            
+        </member>
+        <member name="P:Accord.IReadOnlyDictionary`2.Keys">
+            <summary>
+              Gets the keys.
+            </summary>
+            
+        </member>
+        <member name="P:Accord.IReadOnlyDictionary`2.Values">
+            <summary>
+              Gets the values.
+            </summary>
+            
+        </member>
+        <member name="P:Accord.IReadOnlyDictionary`2.Item(`0)">
+            <summary>
+              Gets the value associated with the specified key.
+            </summary>
+            
+        </member>
         <member name="M:Accord.Collections.TwoWayDictionary`2.#ctor">
             <summary>
               Initializes a new instance of the <see cref="T:Accord.Collections.TwoWayDictionary`2"/> class
@@ -3049,7 +3093,7 @@
             </summary>
             
         </member>
-        <member name="P:Accord.Collections.TwoWayDictionary`2.System#Collections#Generic#IReadOnlyDictionary{TFirst@TSecond}#Keys">
+        <member name="P:Accord.Collections.TwoWayDictionary`2.Accord#IReadOnlyDictionary{TFirst@TSecond}#Keys">
             <summary>
               Gets an <see cref="T:System.Collections.Generic.ICollection`1" /> containing the keys of the <see cref="T:System.Collections.Generic.IDictionary`2" />.
             </summary>
@@ -3067,7 +3111,7 @@
             </summary>
             
         </member>
-        <member name="P:Accord.Collections.TwoWayDictionary`2.System#Collections#Generic#IReadOnlyDictionary{TFirst@TSecond}#Values">
+        <member name="P:Accord.Collections.TwoWayDictionary`2.Accord#IReadOnlyDictionary{TFirst@TSecond}#Values">
             <summary>
               Gets an <see cref="T:System.Collections.Generic.ICollection`1" /> containing the values in the <see cref="T:System.Collections.Generic.IDictionary`2" />.
             </summary>

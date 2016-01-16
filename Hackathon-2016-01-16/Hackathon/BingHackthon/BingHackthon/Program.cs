@@ -12,6 +12,7 @@ using System.Reflection;
 using Accord.MachineLearning.Bayes;
 using Accord.MachineLearning.VectorMachines.Learning;
 using Accord.MachineLearning.VectorMachines;
+using Accord.MachineLearning;
 
 namespace BingHackthon
 {
@@ -43,10 +44,30 @@ namespace BingHackthon
                 table.Rows.Add(s);
             }
 
-            Console.WriteLine(table); 
+            //Console.WriteLine(table); 
+            #endregion
+
+            #region TO Csv
+            var dt = table;
+            StringBuilder sb = new StringBuilder();
+
+            IEnumerable<string> columnNames = dt.Columns.Cast<DataColumn>().
+                                              Select(column => column.ColumnName);
+            sb.AppendLine(string.Join(",", columnNames));
+
+            foreach (DataRow row in dt.Rows)
+            {
+                IEnumerable<string> fields = row.ItemArray.Select(field => field.ToString());
+                sb.AppendLine(string.Join(",", fields));
+            }
+
+            File.WriteAllText("train.csv", sb.ToString());
             #endregion
 
 
+            #region Bag Of words
+            
+            #endregion
 
         }
     }

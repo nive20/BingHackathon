@@ -13,8 +13,8 @@ test_data_features=vectorizer.fit_transform(test["Summary"])
 resultWithOneVsRest = OneVsRestClassifier(LinearSVC(random_state=0)).fit(train_data_features, train["Topic"]).predict(test_data_features)
 resultWithOneVsOne= OneVsOneClassifier(LinearSVC(random_state=0)).fit(train_data_features, train["Topic"]).predict(test_data_features)
 
-outputWithOneVsRest = pd.DataFrame( data={"record id":test["RecordID"], "topic":resultWithOneVsRest} )
+outputWithOneVsRest = pd.DataFrame( data={"record_id":test["RecordID"], "topic_id":resultWithOneVsRest} )
 outputWithOneVsRest.to_csv( "Task1_outputWithOneVsRest.tsv", index=False, quoting=3 , sep="\t")
 
-resultWithOneVsOne = pd.DataFrame( data={"record id":test["RecordID"], "topic":resultWithOneVsOne} )
+resultWithOneVsOne = pd.DataFrame( data={"record_id":test["RecordID"], "topic_id":resultWithOneVsOne} )
 resultWithOneVsOne.to_csv( "Task1_resultWithOneVsOne.tsv", index=False, quoting=3, sep="\t")
